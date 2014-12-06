@@ -41,4 +41,7 @@ C:\wamp\www\MAD9014\shopping\platforms\android\assets\www\img\delete.png \
 C:\wamp\www\MAD9014\shopping\platforms\android\assets\www\img\logo.png \
 C:\wamp\www\MAD9014\shopping\platforms\android\assets\www\js\index.js \
 C:\wamp\www\MAD9014\shopping\platforms\android\assets\www\js\localStorage.js \
+C:\wamp\www\MAD9014\shopping\platforms\android\assets\www\plugins\org.apache.cordova.splashscreen \
+C:\wamp\www\MAD9014\shopping\platforms\android\assets\www\plugins\org.apache.cordova.splashscreen\www \
+C:\wamp\www\MAD9014\shopping\platforms\android\assets\www\plugins\org.apache.cordova.splashscreen\www\splashscreen.js \
 C:\wamp\www\MAD9014\shopping\platforms\android\ant-build\AndroidManifest.xml \

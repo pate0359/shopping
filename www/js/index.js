@@ -71,21 +71,6 @@ var app = {
     removeItem: function (id) {
         //ev.currentTarget.firstChild - the textNode inside the paragraph
         //ev.currentTarget.firstChild.nodeValue - the text inside the textNode
-//        var txt = $.trim($(ev).text());
-//        console.log("hello : "+txt);
-//        //alert(txt);
-//        
-//        for (var i = 0; i < itemList.length; i++) {
-//            
-//            console.log("1:"+itemList[i]+"-->2:"+txt);
-//            
-//            if (itemList[i] === txt) {
-//                //found the match
-//                
-//                itemList.splice(i, 1);
-//                //alert("matched")
-//            }
-//        }
         
         itemList.splice(id, 1);
         console.log(itemList);
@@ -95,80 +80,42 @@ var app = {
 
     showList: function (ev) {
 
-        //console.log("showList called");
-        
+        $("#custom-fieldcontain").html("");
         var node = ""
-        for (var i = 0; i < itemList.length; i++) {
-            node = node + ('<li><input type="checkbox"> '+itemList[i]+'<a href="#" data-role="button" class="btnDelete" data-mini="true" data-icon="delete" id="'+i+'">delete</a></li>');
-//            node = node + ('<li><input type="checkbox"> '+itemList[i]+'<input type="button" class="btnDelete" id="'+i+'"value="Delete"/></a></li>');
+        for (var i = 0; i < itemList.length; i++) {            
+            node =node + ('<fieldset data-role="controlgroup"><input type="checkbox" name="checkbox" id="checkbox" class="custom"><label for="checkbox">'+itemList[i]+'</label><a href="#" data-role="button" class="btnDelete" id="'+i+'" data-iconpos="notext" data-mini="true" data-icon="delete">Delete</a></fieldset>');
         }
-                 
-        $(".list").html(node);
+        
+        console.log(node);
+//        node.page();
+//        $('#checkbox').textinput();
+        $("#custom-fieldcontain").append(node);
+        $("#custom-fieldcontain").trigger('create');
+//        $("div").trigger('create');
+//        $("[data-role=controlgroup]").controlgroup("refresh");
+//        $("#custom-fieldcontain").page();
+//        $('div[data-role=content]').trigger('refresh');
         
         //Open dialog
         $('.btnDelete').on("click", function () {
             //console.log('Prove event fired');
             deletId=$(this).attr("id");
+            $("#dialog").find(".alertMessage").html("Are you sure, you want to delete \""+itemList[deletId]+"\" ?");
             $(this).attr("href","#dialog");
         });
-        
-//         $("li").click(function (e) {
-//            var cb = $(this).find(":checkbox")[0];
-//            if (e.target != cb) cb.checked = !cb.checked;
-//            $(this).toggleClass("selected", cb.checked);
-//        });
-        
-//        $('.YesBtn').unbind( 'click' ).click( function() {
-//            // your code
-//        });
-        
+                
         $('.YesBtn').unbind( 'click' ).click( function() {
             
             console.log("YesBtn");
             app.removeItem(deletId);
-//            var abc = $(this).previousObject;
-            
             
         });
         
-        $('.list li a').on("click",function()
-                              {
+        $(document).on('pageshow', '.btnDelete', function(){
             
-           // alert($(this).attr("id"));
-           // $.mobile.navigate( "#dialog", { role: "dialog" } );
+          $('#dialog').popup('reposition', 'positionTo: window');
         });
-        
-        
-        
-        
-//        $('.list li span').on("click",app.removeItem());
-        
-//        $('.list li span:last-child').dialog({
-//          modal: true, title: 'Are you sure?', zIndex: 10000, autoOpen: true,
-//          width: 'auto', resizable: false,
-//          buttons: {
-//              Yes: function () {
-//                  doFunctionForYes();
-//                  $(this).dialog("close");
-//              },
-//              No: function () {
-//                  doFunctionForNo();
-//                  $(this).dialog("close");
-//              }
-//          },
-//          close: function (event, ui) {
-//              $(this).remove();
-//          }
-//        });
     }
-    
-//    callback: function(value) {
-//        if (value) {
-//            alert("Confirmed");
-//        } else {
-//            alert("Rejected");
-//        }
-//    },
 };
 
 app.initialize();

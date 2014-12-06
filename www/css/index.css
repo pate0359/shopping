@@ -152,111 +152,33 @@ body {
     width: 100%;
     height: 50px;
 }
-/*
-li
-{
-    background: yellow;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid white;
-}
-*/
-
-/*input[type="text"] {
-    width: 150px;
-    display: block;
-    margin-bottom: 10px;
-    background-color: yellow;
-    float: left;
-}
-
-input[type="button"] {
-    width: 150px;
-    text-align: center;
-    display: block;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    background-color: yellow;
-    float: left;
-}*/
-
 /* Checklist*/
 .list
 {
-    width: 80%;
+    width: 100%;
     margin-left: 10%;
 }
-/*
-.list li,
-.active-checklist li {
-    margin-bottom: 4px;
-    position:relative;
-    width: 100%;
-}
-.list {
-    font-family: helvetica;
-    font-size: 14px;
-    margin-left: 23px;
-    cursor: pointer;
-    list-style-type: none;
-    display: inline-block;
-    float: left;
-    margin-top: 15px;
-    padding: 0;
-}
-.list li span:first-child {
-    width: 16px;
-    height: 16px;
-    border-radius: 3px;
-    display: inline-block;
-    background-color: #f6f6f6;
-    border: 1px solid #c2c2c2;
-}
-.list li.active-checklist span:first-child {
-    border: 1px solid #49a1d7;
-}
-.list li span cite {
-    display: none;
-}
-.list li.active-checklist span cite {
-    position: relative;
-    left: 2px;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 3px;
-    background-color: #49a1d7;
-    border: none;
-}
-*/
-
-
-.deleteBtn {
-/*    background-image:url('../img/delete.png');*/
-    width: 32px;
-    height: 32px;
-    margin-right: 25%;
-    position:absolute;
-    right: 2%;
-    data-icon:delete;
-
-/*
-    top:2px;
-    right:2px;
-*/
-
-/*    margin-right: 5%;*/
-/*    margin-left: 25%;*/
-}
-
-li {
-    padding:5px 8px;
-    width: 100%;
-    height: 50px;
-}
-
 #dialog-confirm
 {
     display: none;
 }
 
-/*.ui-dialog  .ui-header .ui-btn-icon-notext  { display:none;} */
+#custom-fieldcontain [data-role=controlgroup] {
+    width: 100%;
+    display: inline-block;
+}
+        
+#custom-fieldcontain [data-role=controlgroup] .ui-controlgroup-controls {
+    width: 100%;        
+}  
+
+#custom-fieldcontain [data-role=controlgroup] .ui-controlgroup-controls .ui-checkbox{
+    margin-left: 2%;
+    width: 75% !important;
+    float: left;
+}  
+
+#custom-fieldcontain [data-role=controlgroup] .ui-controlgroup-controls  [data-role=button]{
+    width: 10% !important;        
+    float: left;
+}  
