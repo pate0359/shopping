@@ -90,7 +90,8 @@ var app = {
 //        node.page();
 //        $('#checkbox').textinput();
         $("#custom-fieldcontain").append(node);
-        $("#custom-fieldcontain").trigger('create');
+   // $('body').append(html).trigger('create');
+//        $("#homePage").trigger('refresh');
 //        $("div").trigger('create');
 //        $("[data-role=controlgroup]").controlgroup("refresh");
 //        $("#custom-fieldcontain").page();

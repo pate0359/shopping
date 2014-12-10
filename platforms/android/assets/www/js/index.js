@@ -32,7 +32,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function () {
         // document.addEventListener('deviceready', app.onDeviceReady, false);
-        document.addEventListener('deviceready', app.onDeviceReady, false); //DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', app.onDeviceReady, false); //DOMContentLoaded
     },
     // deviceready Event Handler  
     //
@@ -90,7 +90,8 @@ var app = {
 //        node.page();
 //        $('#checkbox').textinput();
         $("#custom-fieldcontain").append(node);
-        $("#custom-fieldcontain").trigger('create');
+   // $('body').append(html).trigger('create');
+//        $("#homePage").trigger('refresh');
 //        $("div").trigger('create');
 //        $("[data-role=controlgroup]").controlgroup("refresh");
 //        $("#custom-fieldcontain").page();
