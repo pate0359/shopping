@@ -38,6 +38,9 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     
+    <link rel="stylesheet" href="css/themes/shopping.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    
 
     
     <title>Shopping List</title>
@@ -55,7 +58,7 @@
         
 -->
     <!-- Main/Home Page -->
-    <div data-role="page"  id="homePage" class="homePage">
+    <div data-role="page" data-theme="a"  id="homePage" class="homePage">
         <div data-role="header" style="word-wrap:break-word">
             <h1 style="word-wrap:break-word">Shopping List</h1>
         </div>
@@ -71,13 +74,11 @@
 -->
         <div data-role="content" id="content">
              <div class="ui-field-contain" id="custom-fieldcontain">
-<!--
               <fieldset data-role="controlgroup">
                 <input type="checkbox" name="checkbox" id="checkbox" class="custom">
                 <label for="checkbox">I agree</label>
                   <a href="#" data-role="button" class="btnDelete" data-iconpos="notext" data-mini="true" data-icon="delete">Delete</a>
               </fieldset>
--->
             </div>
 		</div>
             
@@ -86,13 +87,12 @@
             <form id="form">
                 <input type="text" name="item" id="item" placeholder="Add item" />
                 <input type="submit" id="Add" value="Add">
-                
             </form>
         </div>
     </div>
     
     <!-- Dialog Templete-->
-	<div data-role="dialog" id="dialog" class="dialog" data-close-btn="right">
+	<div data-role="dialog" id="dialog" class="dialog" data-close-btn="right" data-theme="a">
 		<div data-role="header" id="header">
 			<h1>Delete?</h1>
 		</div>

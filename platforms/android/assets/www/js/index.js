@@ -42,9 +42,10 @@ var app = {
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
         console.log("Device ready");
+        
         if (localStorage.getItem(STORAGE_KEY)) {
             itemList = JSON.parse(localStorage.getItem(STORAGE_KEY));
-            app.showList();
+            //app.showList();
             //convert from String to Array
         }
 
