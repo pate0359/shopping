@@ -45,7 +45,7 @@ var app = {
         
         if (localStorage.getItem(STORAGE_KEY)) {
             itemList = JSON.parse(localStorage.getItem(STORAGE_KEY));
-            //app.showList();
+            app.showList();
             //convert from String to Array
         }
 
@@ -78,39 +78,28 @@ var app = {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(itemList));
         app.showList();
     },
-
+	
     showList: function (ev) {
 
-        $("#custom-fieldcontain").html("");
+        $("#myList").html("");
         var node = ""
         for (var i = 0; i < itemList.length; i++) {            
-            node =node + ('<fieldset data-role="controlgroup"><input type="checkbox" name="checkbox" id="checkbox" class="custom"><label for="checkbox">'+itemList[i]+'</label><a href="#" data-role="button" class="btnDelete" id="'+i+'" data-iconpos="notext" data-mini="true" data-icon="delete">Delete</a></fieldset>');
+			node = node+ ('<li><label class="label"><input type="checkbox">'+itemList[i]+'</label><a href="#" data-role="button" class="btnDelete" id="'+i+'" data-iconpos="notext" data-mini="true" data-icon="delete">Delete</a></li>');
         }
-        
-        console.log(node);
-//        node.page();
-//        $('#checkbox').textinput();
-        $("#custom-fieldcontain").append(node);
-   // $('body').append(html).trigger('create');
-//        $("#homePage").trigger('refresh');
-//        $("div").trigger('create');
-//        $("[data-role=controlgroup]").controlgroup("refresh");
-//        $("#custom-fieldcontain").page();
-//        $('div[data-role=content]').trigger('refresh');
-        
-        //Open dialog
+
+		$("#myList").html(node);
+//		$( "#mylist" ).listview( "refresh" );
+
+		//Open dialog
         $('.btnDelete').on("click", function () {
-            //console.log('Prove event fired');
             deletId=$(this).attr("id");
             $("#dialog").find(".alertMessage").html("Are you sure, you want to delete \""+itemList[deletId]+"\" ?");
             $(this).attr("href","#dialog");
         });
                 
         $('.YesBtn').unbind( 'click' ).click( function() {
-            
             console.log("YesBtn");
             app.removeItem(deletId);
-            
         });
         
         $(document).on('pageshow', '.btnDelete', function(){
