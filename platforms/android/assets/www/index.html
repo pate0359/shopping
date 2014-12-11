@@ -31,6 +31,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	 <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <!--    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">-->
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -39,7 +40,8 @@
     <script type="text/javascript" src="js/index.js"></script>
     
     <link rel="stylesheet" href="css/themes/shopping.css" />
-  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+ 
+
     
 
     
@@ -47,42 +49,27 @@
 </head>
 
 <body>
-    <!--
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        
--->
+
     <!-- Main/Home Page -->
     <div data-role="page" data-theme="a"  id="homePage" class="homePage">
         <div data-role="header" style="word-wrap:break-word">
             <h1 style="word-wrap:break-word">Shopping List</h1>
         </div>
 
+		<div data-role="content" id="content">
+
+			<ul id="myList" data-role="listview">
 <!--
-                <div class="ui-field-contain" id="custom-fieldcontain">
-              <fieldset data-role="controlgroup">
-                <input type="checkbox" name="checkbox" id="checkbox" class="custom">
-                <label for="checkbox">I agree</label>
-                  <a href="#" data-role="button" class="btnDelete" data-iconpos="notext" data-mini="true" data-icon="delete">Delete</a>
-              </fieldset>
-            </div>
+				<li>
+						<label class="label"><input type="checkbox"> I agree </label>
+						<button data-icon="delete" class="delete"></button> 
+				</li>
 -->
-        <div data-role="content" id="content">
-             <div class="ui-field-contain" id="custom-fieldcontain">
-              <fieldset data-role="controlgroup">
-                <input type="checkbox" name="checkbox" id="checkbox" class="custom">
-                <label for="checkbox">I agree</label>
-                  <a href="#" data-role="button" class="btnDelete" data-iconpos="notext" data-mini="true" data-icon="delete">Delete</a>
-              </fieldset>
-            </div>
+			</ul>
+			
+		
 		</div>
             
-<!--        </div>-->
         <div data-role="footer" id="homefooter">
             <form id="form">
                 <input type="text" name="item" id="item" placeholder="Add item" />

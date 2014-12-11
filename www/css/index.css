@@ -134,11 +134,13 @@ li
 {
 	width: 100%;
 	padding-left: 5%;
+    margin-top: 50%;
 }
 
 .label
 {
 	padding-left: 5%;
+    padding-top: 1%;
 	width: 80% !important;
 	float: left;
 }
@@ -146,7 +148,7 @@ li
 .ui-checkbox
 {
 /*	margin-left: 2%;*/
-	width: 80% !important;
+	width: 70% !important;
 	float: left;
 }
 
@@ -156,6 +158,8 @@ li
 	float: left;
 	height: 30px;
 /*	margin: 0;*/
-	margin-left: 2%;
+	margin-left: -5%;
+    padding-top: 1%;
+/*    margin-right: 5%;*/
 /*	padding: 0;*/
 }
